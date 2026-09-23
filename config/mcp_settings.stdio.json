@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "agent-bus": {
+      "command": "C:\\Users\\刹那酸语\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "args": [
+        "C:\\Users\\刹那酸语\\Desktop\\codearts-agent-bus\\src\\bus_mcp.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "AGENT_BUS_HOME": "C:\\Users\\刹那酸语\\.codeartsdoer\\agent-bus"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "D:/TestCode/demo"
+      ]
+    },
+    "amap-maps-streamableHTTP": {
+      "url": "https://mcp.amap.com/mcp?key=你在高德官网申请的key",
+      "type": "streamableHttp"
+    },
+    "agent-bus": {
+      "command": "C:\\Users\\刹那酸语\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "args": [
+        "C:\\Users\\刹那酸语\\Desktop\\codearts-agent-bus\\src\\bus_mcp.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

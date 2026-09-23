@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.codeartsdoer/mcp/mcp_settings.json
+.codeartsdoer/skills/
+.merkle-snapshot.json

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent-bus": {
+      "url": "http://127.0.0.1:8765/mcp?token=把bus_http.py启动时打印的token粘到这里",
+      "type": "streamableHttp"
+    }
+  }
+}
