@@ -31,9 +31,9 @@
 <body>
 <header>
   <h1>码道会话总线 · <span>agent-bus</span> 协作看板</h1>
-  <div class="sub">本页每 5 秒自动刷新 · 快照时间 2026-09-23 23:02:08 ·
+  <div class="sub">本页每 5 秒自动刷新 · 快照时间 2026-09-24 11:49:09 ·
     总线目录 <code>C:\Users\刹那酸语\.codeartsdoer\agent-bus</code></div>
-  <div class="kpis"><span class="kpi"><b>0</b>在线会话</span><span class="kpi"><b>2</b>消息总数</span><span class="kpi"><b>1</b>任务总数</span><span class="kpi"><b>0</b>未完成</span></div>
+  <div class="kpis"><span class="kpi"><b>0</b>在线会话</span><span class="kpi"><b>7</b>消息总数</span><span class="kpi"><b>2</b>任务总数</span><span class="kpi"><b>0</b>未完成</span></div>
 </header>
 <main>
   <section><h2>会话拓扑（谁在线、在干什么）</h2>
@@ -41,17 +41,28 @@
       <circle cx="470" cy="250" r="74" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
       <text x="470" y="242" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700">agent-bus</text>
       <text x="470" y="264" text-anchor="middle" fill="#94a3b8" font-size="11">会话总线 v1.0.0</text>
-      <text x="470" y="282" text-anchor="middle" fill="#64748b" font-size="10">2026-09-23 23:02:08</text>
+      <text x="470" y="282" text-anchor="middle" fill="#64748b" font-size="10">2026-09-24 11:49:09</text>
       
         <g class="node">
           <line x1="470" y1="250" x2="470.0" y2="75.0" stroke="#334155" stroke-width="1.5"
                 stroke-dasharray="4 4" opacity="0.7"/>
           <circle cx="470.0" cy="75.0" r="46" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
           <text x="470.0" y="69.0" text-anchor="middle" fill="#e2e8f0"
-                font-size="13" font-weight="700">codearts-wor</text>
+                font-size="13" font-weight="700">planner</text>
           <text x="470.0" y="87.0" text-anchor="middle" fill="#94a3b8"
                 font-size="11">离线</text>
           <text x="470.0" y="103.0" text-anchor="middle" fill="#64748b" font-size="10"
+                >leader · 未读2</text>
+        </g>
+        <g class="node">
+          <line x1="470" y1="250" x2="820.0" y2="250.0" stroke="#334155" stroke-width="1.5"
+                stroke-dasharray="4 4" opacity="0.7"/>
+          <circle cx="820.0" cy="250.0" r="46" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
+          <text x="820.0" y="244.0" text-anchor="middle" fill="#e2e8f0"
+                font-size="13" font-weight="700">codearts-ses</text>
+          <text x="820.0" y="262.0" text-anchor="middle" fill="#94a3b8"
+                font-size="11">离线</text>
+          <text x="820.0" y="278.0" text-anchor="middle" fill="#64748b" font-size="10"
                 >worker · 未读1</text>
         </g>
         <g class="node">
@@ -63,12 +74,31 @@
           <text x="470.0" y="437.0" text-anchor="middle" fill="#94a3b8"
                 font-size="11">离线</text>
           <text x="470.0" y="453.0" text-anchor="middle" fill="#64748b" font-size="10"
-                >leader · 未读1</text>
+                >leader · 未读2</text>
+        </g>
+        <g class="node">
+          <line x1="470" y1="250" x2="120.0" y2="250.0" stroke="#334155" stroke-width="1.5"
+                stroke-dasharray="4 4" opacity="0.7"/>
+          <circle cx="120.0" cy="250.0" r="46" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
+          <text x="120.0" y="244.0" text-anchor="middle" fill="#e2e8f0"
+                font-size="13" font-weight="700">codearts-wor</text>
+          <text x="120.0" y="262.0" text-anchor="middle" fill="#94a3b8"
+                font-size="11">离线</text>
+          <text x="120.0" y="278.0" text-anchor="middle" fill="#64748b" font-size="10"
+                >worker · 未读1</text>
         </g>
     </svg></section>
   <section><h2>任务看板</h2>
     <table><thead><tr><th>任务号</th><th>状态</th><th>标题</th><th>派发 → 执行</th><th>结果/进度</th><th>更新</th></tr></thead>
     <tbody>
+      <tr>
+        <td><code>t_7bd8a0b6</code></td>
+        <td><span class="pill" style="background:#22c55e">done</span></td>
+        <td>实跑三套测试并回报真实计数</td>
+        <td>planner → codearts-session-B</td>
+        <td class="muted">e2e=全部通过；bus_core 单元测试 Ran 13 tests → OK；双会话集成=全链路通过。（数据取自本次</td>
+        <td class="muted">2026-09-23 23:16:11</td>
+      </tr>
       <tr>
         <td><code>t_0f9f4c3b</code></td>
         <td><span class="pill" style="background:#22c55e">done</span></td>
@@ -81,6 +111,70 @@
   <section><h2>消息与事件流</h2>
     <table><thead><tr><th>时间</th><th>类型</th><th>来源</th><th>内容</th></tr></thead>
     <tbody>
+      <tr>
+        <td class="muted">2026-09-23 23:16:20</td>
+        <td><span class="tag">message</span> note</td>
+        <td>planner → codearts-session-B</td>
+        <td class="muted">协作演示：leader 派活 → worker 领活 → 实跑测试 → 回执，全链路贯通。</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:20</td>
+        <td><span class="tag">message</span> note</td>
+        <td>planner → planner</td>
+        <td class="muted">协作演示：leader 派活 → worker 领活 → 实跑测试 → 回执，全链路贯通。</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:20</td>
+        <td><span class="tag">message</span> report</td>
+        <td>codearts-session-B → planner</td>
+        <td class="muted">三套测试已实跑完成，回执已提交，请复核。</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:11</td>
+        <td><span class="tag">message</span> task_report</td>
+        <td>codearts-session-B → planner</td>
+        <td class="muted">【任务回执 t_7bd8a0b6】实跑三套测试并回报真实计数
+状态：done
+结果：e2e=全部通过；bus_core 单元测试 Ran 13 tests → OK；双会话集成=全</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:11</td>
+        <td><span class="tag">event</span> report</td>
+        <td>codearts-session-B</td>
+        <td class="muted">report t_7bd8a0b6</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:00</td>
+        <td><span class="tag">event</span> claim</td>
+        <td>codearts-session-B</td>
+        <td class="muted">claim t_7bd8a0b6</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:00</td>
+        <td><span class="tag">message</span> task</td>
+        <td>planner → codearts-session-B</td>
+        <td class="muted">【新任务 t_7bd8a0b6】实跑三套测试并回报真实计数
+
+依次运行 tests/test_e2e.py、tests.test_bus_core_unit、tests/test_</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:00</td>
+        <td><span class="tag">event</span> heartbeat</td>
+        <td>planner</td>
+        <td class="muted">heartbeat</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:16:00</td>
+        <td><span class="tag">event</span> register</td>
+        <td>codearts-session-B</td>
+        <td class="muted">register</td>
+      </tr>
+      <tr>
+        <td class="muted">2026-09-23 23:15:43</td>
+        <td><span class="tag">event</span> register</td>
+        <td>planner</td>
+        <td class="muted">register</td>
+      </tr>
       <tr>
         <td class="muted">2026-09-23 21:12:12</td>
         <td><span class="tag">message</span> task_report</td>
