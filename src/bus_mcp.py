@@ -56,7 +56,7 @@ TOOLS = [
        "查看自己的身份、未读消息数、在线同伴数。Use when: 不确定自己是否已注册、或想快速看是否有新消息。"),
 
     _t("bus_list_peers",
-       "列出总线上有哪些会话（同伴发现，对标 Claude Code 未发布的 ListPeersTool）。"
+       "列出总线上有哪些会话（同伴发现：谁在线、谁能干哪类活）。"
        "Use when: 需要知道有谁在线、谁能干哪类活、或派活前确认目标名字。",
        {"include_offline": {**B, "description": "是否包含离线会话（默认 false，只看在线的）"}}),
 
@@ -125,7 +125,7 @@ TOOLS = [
        {"task_id": S, "reason": S}, ["task_id"]),
 
     _t("bus_ps",
-       "会话守护视图（对标 Claude Code 未发布的 Daemon Mode：像 docker ps 一样看待 AI 会话）："
+       "会话守护视图（像 docker ps 一样看待 AI 会话）："
        "谁在线、在干什么、几条未读、挂了几个任务。Use when: 汇报进度、排查谁没在干活。"),
 
     _t("bus_log",

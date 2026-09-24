@@ -97,7 +97,7 @@ def main() -> int:
           rb.get("session_id", ""))
     check("两个会话 ID 不同", ra.get("session_id") != rb.get("session_id"))
 
-    # ---- 2. A 能"看见" B（对标 ListPeersTool）
+    # ---- 2. A 能"看见" B（参考：同伴发现）
     peers = a.call("bus_list_peers")
     names = [p["name"] for p in peers.get("peers", [])]
     check("A 发现同伴 B", "worker-frontend" in names, str(names))
@@ -140,7 +140,7 @@ def main() -> int:
     check("任务看板显示已完成", (tasks.get("summary") or {}).get("done") == 1,
           str(tasks.get("summary")))
 
-    # ---- 7. 守护视图 + 看板（对标 Daemon Mode）
+    # ---- 7. 守护视图 + 看板（参考：会话守护视图）
     psv = a.call("bus_ps")
     check("守护视图能看到两个在线会话", len(psv.get("sessions", [])) == 2,
           str([(s["name"], s["state"]) for s in psv.get("sessions", [])]))
